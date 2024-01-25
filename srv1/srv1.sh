@@ -1,6 +1,6 @@
 #!/bin/bash
 
-dpkg -i filebeat*.deb
+dpkg -i ~/repo/srv1/filebeat*.deb
 cp ~/repo/srv1/nginx.conf /etc/nginx/nginx.conf
 chmod 644 /etc/nginx/nginx.conf
 cp ~/repo/srv1/frontend.conf /etc/nginx/sites-available/frontend.conf
