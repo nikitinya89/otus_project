@@ -1,6 +1,6 @@
 #!/bin/bash
 apt update && apt upgrade -y
-apt install bash-completion  nginx git
+apt install bash-completion  nginx git -y
 mkdir repo && cd repo && git init
 git config --global user.name "Yuriy Nikitin"
 git config --global user.email nikitinya89@gmail.com
