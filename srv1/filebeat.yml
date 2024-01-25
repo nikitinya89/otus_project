@@ -7,6 +7,6 @@ filebeat.inputs:
   prospector.scanner.exclude_files: ['.gz$']
 filebeat.config.modules:
   path: ${path.config}/modules.d/*.yml
-  reload.enabled: false
+  reload.enabled: true
 output.logstash:
   hosts: ["10.0.0.14:5400"]
