@@ -1,5 +1,6 @@
 #!/bin/bash
 
+dpkg -i filebeat*.deb
 cp ~/repo/srv1/nginx.conf /etc/nginx/nginx.conf
 chmod 644 /etc/nginx/nginx.conf
 cp ~/repo/srv1/frontend.conf /etc/nginx/sites-available/frontend.conf
@@ -10,3 +11,4 @@ systemctl reload nginx
 cp ~/repo/srv1/filebeat.yml /etc/filebeat/filebeat.yml
 chmod 644 /etc/filebeat/filebeat.yml
 systemctl restart filebeat
+sudo filebeat modules enable nginx
