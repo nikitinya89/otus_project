@@ -1,0 +1,12 @@
+filebeat.inputs:
+- type: log
+  paths:
+    - /var/log/nginx/*.log
+  enabled: true
+  exclude_files: ['.gz$']
+  prospector.scanner.exclude_files: ['.gz$']
+filebeat.config.modules:
+  path: ${path.config}/modules.d/*.yml
+  reload.enabled: false
+output.logstash:
+  hosts: ["10.0.0.14:5400"]
