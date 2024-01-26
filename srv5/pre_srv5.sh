@@ -1,6 +1,7 @@
 #!/bin/bash
 apt update && apt upgrade -y
 apt install bash-completion git -y
+ssh-keygen -t rsa -N '' -f ~/.ssh/id_rsa <<< y
 mkdir ~/repo && cd ~/repo && git init
 git config --global user.name "Yuriy Nikitin"
 git config --global user.email nikitinya89@gmail.com
