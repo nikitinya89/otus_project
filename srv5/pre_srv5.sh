@@ -3,7 +3,7 @@ apt update && apt upgrade -y
 apt install bash-completion git -y
 ssh-keygen -t rsa -N '' -f /root/.ssh/id_rsa <<< y
 git clone https://github.com/nikitinya89/otus_project.git
-chmod +x ~/otus_project/*/*.sh
+chmod +x /root/otus_project/*/*.sh
 apt install default-jdk -y
 mkdir /root/elk
 cd /root/elk
