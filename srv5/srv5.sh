@@ -14,4 +14,4 @@ systemctl restart elasticsearch.service
 systemctl restart kibana.service
 systemctl restart logstash.service
 cd ~/otus_project/srv5/
-curl -X POST "localhost:5601/api/saved_objects/_import" -H "kbn-xsrf: true" --form file=@export.ndjson
+curl -X POST "localhost:5601/api/saved_objects/_import" -H "kbn-xsrf: true" --form file=@kibana.ndjson
