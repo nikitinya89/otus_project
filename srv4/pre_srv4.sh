@@ -1,6 +1,6 @@
 #!/bin/bash
 apt update && apt upgrade -y
-apt install bash-completion git prometheus -y
+apt install bash-completion git prometheus prometheus-node-exporter -y
 ssh-keygen -t rsa -N '' -f /root/.ssh/id_rsa <<< y
 git clone https://github.com/nikitinya89/otus_project.git
 chmod +x /root/otus_project/*/*.sh
@@ -8,4 +8,5 @@ wget -c https://mirror.yandex.ru/mirrors/packages.grafana.com/enterprise/deb/poo
 dpkg -i /root/grafana*.deb
 apt -f install -y
 systemctl enable --now prometheus
-systemctl enable --now grafana
+systemctl enable --now prometheus-node-exporter
+systemctl enable --now grafana-server
