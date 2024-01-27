@@ -2,8 +2,6 @@
 apt update && apt upgrade -y
 apt install bash-completion git prometheus-node-exporter -y
 ssh-keygen -t rsa -N '' -f /root/.ssh/id_rsa <<< y
-echo -e "if [ -f /etc/bash_completion ] && ! shopt -oq posix; then\n    . /etc/bash_completion\nfi" >> /root/.bashrc
-source /root/.bashrc
 git clone https://github.com/nikitinya89/otus_project.git
 chmod +x /root/otus_project/*/*.sh
 apt install default-jdk -y
@@ -20,3 +18,5 @@ systemctl enable --now elasticsearch
 systemctl enable --now kibana
 systemctl enable --now logstash
 systemctl enable --now prometheus-node-exporter
+echo -e "if [ -f /etc/bash_completion ] && ! shopt -oq posix; then\n    . /etc/bash_completion\nfi" >> /root/.bashrc
+exec bash --rcfile /root/.bashrc
