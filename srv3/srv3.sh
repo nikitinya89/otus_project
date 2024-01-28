@@ -1,10 +1,6 @@
 #!/bin/bash
-rsync -av /root/otus_project/srv2/wordpress/ /var/www/
-chown -R www-data:www-data /var/www/html/
-chmod -R 755 /var/www/html/
 rm /var/www/html/index.html
-systemctl reload apache2
-cp /root/otus_project/srv2/mysqld.cnf /etc/mysql/mysql.conf.d
+cp /root/otus_project/srv3/mysqld.cnf /etc/mysql/mysql.conf.d
 chmod 644 /etc/mysql/mysql.conf.d
 systemctl restart mysql
 
