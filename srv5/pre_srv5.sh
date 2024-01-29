@@ -19,4 +19,5 @@ systemctl enable --now kibana
 systemctl enable --now logstash
 systemctl enable --now prometheus-node-exporter
 echo -e "if [ -f /etc/bash_completion ] && ! shopt -oq posix; then\n    . /etc/bash_completion\nfi" >> /root/.bashrc
+echo -e "Host 10.0.0.*\n   StrictHostKeyChecking accept-new" >> /root/.ssh/config
 exec bash --rcfile /root/.bashrc
