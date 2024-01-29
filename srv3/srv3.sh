@@ -29,3 +29,12 @@ MYSQL_COMMANDS="STOP REPLICA;
 CHANGE REPLICATION SOURCE TO SOURCE_HOST='10.0.0.11', SOURCE_USER='$DB_REPL_USER', SOURCE_PASSWORD='$DB_REPL_PASSWORD', SOURCE_AUTO_POSITION = 1, GET_SOURCE_PUBLIC_KEY = 1;
 START REPLICA;"
 mysql -e "$MYSQL_COMMANDS"
+
+cp /root/otus_project/srv3/mysql.sh /root/mysql.sh
+chmod +x /root/mysql.sh
+new_crontab="0 23 * * 6 /root/mysql.sh"
+current_crontab=$(crontab -l 2>/dev/null)
+echo "$current_crontab" > temp_crontab
+echo "$new_crontab" >> temp_crontab
+crontab temp_crontab
+rm temp_crontab
