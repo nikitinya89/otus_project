@@ -9,4 +9,5 @@ dpkg -i /root/filebeat*.deb
 systemctl daemon-reload
 systemctl enable --now filebeat
 echo -e "if [ -f /etc/bash_completion ] && ! shopt -oq posix; then\n    . /etc/bash_completion\nfi" >> /root/.bashrc
+echo -e "Host 10.0.0.*\n   StrictHostKeyChecking accept-new" >> /root/.ssh/config
 exec bash --rcfile /root/.bashrc
