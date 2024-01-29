@@ -1,5 +1,6 @@
 #!/bin/bash
-rm /var/www/html/index.html
+cp /root/otus_project/srv2/000-default.conf /etc/apache2/sites-available/000-default.conf
+systemctl reload apache2
 cp /root/otus_project/srv3/mysqld.cnf /etc/mysql/mysql.conf.d/mysqld.cnf
 systemctl restart mysql
 
