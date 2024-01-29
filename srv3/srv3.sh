@@ -15,13 +15,13 @@ for db_dir in $(ls $backup_dir); do
     done
 done
 
-DB_NAME="wordpress_db"
-DB_USER="wordpress"
-DB_PASSWORD="2Z%Zv3W93%"
-MYSQL_COMMANDS="CREATE USER '$DB_USER'@'localhost' IDENTIFIED BY '$DB_PASSWORD';
-GRANT ALL PRIVILEGES ON $DB_NAME.* TO '$DB_USER'@'localhost';
-FLUSH PRIVILEGES;"
-mysql -e "$MYSQL_COMMANDS"
+#DB_NAME="wordpress_db"
+#DB_USER="wordpress"
+#DB_PASSWORD="2Z%Zv3W93%"
+#MYSQL_COMMANDS="CREATE USER '$DB_USER'@'localhost' IDENTIFIED BY '$DB_PASSWORD';
+#GRANT ALL PRIVILEGES ON $DB_NAME.* TO '$DB_USER'@'localhost';
+#FLUSH PRIVILEGES;"
+#mysql -e "$MYSQL_COMMANDS"
 
 DB_REPL_USER="repl"
 DB_REPL_PASSWORD="52v#Q&Xvvs"
