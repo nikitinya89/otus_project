@@ -28,15 +28,17 @@
 **ELK**
 - Сервер, на котором настроен стек ELK (Elasticsearch, Logstash, Kibana) для анализа логов.
 
-- **MySQL DB:** wordpress_db
-- **Пользователь MySQL:** wordpress
-- **Консоль администратора:** [http://10.0.0.11/wp-admin/](http://10.0.0.11/wp-admin/)
-- **FrontEnd:** [http://10.0.0.10/](http://10.0.0.10/)
-- **BackEnd 1:** [http://10.0.0.11/](http://10.0.0.11/)
-- **BackEnd 2:** [http://10.0.0.12/](http://10.0.0.12/)
-- **Grafana:** [http://10.0.0.13:3000/](http://10.0.0.13:3000/)
-- **Kibana:** [http://10.0.0.14:5601/](http://10.0.0.14:5601/)
 
+
+
+>**MySQL DB:** wordpress_db  
+>**Пользователь MySQL:** wordpress  
+>**Консоль администратора:** [http://10.0.0.11/wp-admin/](http://10.0.0.11/wp-admin/)  
+>**FrontEnd:** [http://10.0.0.10/](http://10.0.0.10/)  
+>**BackEnd 1:** [http://10.0.0.11/](http://10.0.0.11/)  
+>**BackEnd 2:** [http://10.0.0.12/](http://10.0.0.12/)  
+>**Grafana:** [http://10.0.0.13:3000/](http://10.0.0.13:3000/)  
+>**Kibana:** [http://10.0.0.14:5601/](http://10.0.0.14:5601/)  
 ## Схема сети
 
 ![image](network.jpg)
