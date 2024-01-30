@@ -18,6 +18,7 @@ while true; do
         if curl http://localhost:5601 2>&1 | grep "Connection refused"; then
                 sleep 5
         else
+                sleep 10
                 curl -X POST "localhost:5601/api/saved_objects/_import" -H "kbn-xsrf: true" --form file=@kibana.ndjson
                 break
         fi
