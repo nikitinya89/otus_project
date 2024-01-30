@@ -13,6 +13,13 @@ systemctl daemon-reload
 systemctl restart elasticsearch.service
 systemctl restart kibana.service
 systemctl restart logstash.service
-sleep 15
 cd ~/otus_project/srv5/
-curl -X POST "localhost:5601/api/saved_objects/_import" -H "kbn-xsrf: true" --form file=@kibana.ndjson
+while true; do
+        if curl http://localhost:5601 2>&1 | grep "Connection refused"; then
+                sleep 5
+        else
+                curl -X POST "localhost:5601/api/saved_objects/_import" -H "kbn-xsrf: true" --form file=@kibana.ndjson
+                break
+        fi
+done
+#curl -X POST "localhost:5601/api/saved_objects/_import" -H "kbn-xsrf: true" --form file=@kibana.ndjson
