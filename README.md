@@ -6,22 +6,20 @@
 
 ## otus_srv1 (10.0.0.10)
 **Frontend, Nginx**
-- Frontend веб-сервер с использованием Nginx. Используется для трансляции запросов к BackEnd серверам.
+- Frontend веб-сервер с использованием Nginx. Используется для трансляции запросов к Backend серверам.
 
 ## otus_srv2 (10.0.0.11)
-**Backend, Apache, WordPress, MySQL Master**
+**Backend, Apache, WordPress, MySQL Source**
 - Backend веб-сервер 1 с использованием Apache, хостит WordPress с MySQL в качестве базы данных.
 - Настроена CMS система WordPress с использованием СУБД MySQL.
-- Настроена репликация MySQL с сервером otus_srv3 в роли Slave.
-- Является Master сервером.
+- MySQL Source. Настроена репликация MySQL с сервером otus_srv3.
 - Файлы WordPress синхронизированы с сервером otus_srv3 с использованием утилиты unison.
 
 ## otus_srv3 (10.0.0.12)
-**Backend, Apache, WordPress, MySQL Slave**
+**Backend, Apache, WordPress, MySQL Replica**
 - Backend веб-сервер 2 с использованием Apache, хостит WordPress с MySQL в качестве базы данных.
 - Настроена CMS система WordPress с использованием СУБД MySQL.
-- Настроена репликация MySQL с сервером otus_srv2 в роли Master.
-- Является Slave сервером.
+- MySQL REplica. Настроена репликация MySQL с сервером otus_srv2.
 - Файлы WordPress синхронизированы с сервером otus_srv2 с использованием утилиты unison.
 
 ## otus_srv4 (10.0.0.13)
