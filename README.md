@@ -19,7 +19,7 @@
 **Backend, Apache, WordPress, MySQL Replica**
 - Backend веб-сервер 2 с использованием Apache, хостит WordPress с MySQL в качестве базы данных.
 - Настроена CMS система WordPress с использованием СУБД MySQL.
-- MySQL REplica. Настроена репликация MySQL с сервером otus_srv2.
+- MySQL Replica. Настроена репликация MySQL с сервером otus_srv2.
 - Файлы WordPress синхронизированы с сервером otus_srv2 с использованием утилиты unison.
 
 ## otus_srv4 (10.0.0.13)
