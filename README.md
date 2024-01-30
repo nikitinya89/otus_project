@@ -28,7 +28,7 @@
 
 ## otus_srv5 (10.0.0.14)
 **ELK**
-- Настроен стек ELK (Elasticsearch, Logstash, Kibana) для анализа логов Frontend веб спервера.  
+- Настроен стек ELK (Elasticsearch, Logstash, Kibana) для анализа логов Frontend веб сервера.  
 ## Ссылки
 >**MySQL DB:** wordpress_db  
 >**Пользователь MySQL:** wordpress  
