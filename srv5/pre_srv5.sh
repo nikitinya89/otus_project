@@ -13,6 +13,7 @@ wget -c https://mirror.yandex.ru/mirrors/elastic/8/pool/main/l/logstash/logstash
 dpkg -i /root/elk/elasticsearch*.deb
 dpkg -i /root/elk/kibana*.deb
 dpkg -i /root/elk/logstash*.deb
+cd /root/
 systemctl daemon-reload
 systemctl enable --now elasticsearch
 systemctl enable --now kibana
